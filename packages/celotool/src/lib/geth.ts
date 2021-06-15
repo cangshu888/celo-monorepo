@@ -11,6 +11,7 @@ import { merge, range } from 'lodash'
 import fetch from 'node-fetch'
 import path from 'path'
 import sleep from 'sleep-promise'
+import { waitForBlock } from 'src/e2e-tests/utils'
 import Web3 from 'web3'
 import { Admin } from 'web3-eth-admin'
 import { spawnCmd, spawnCmdWithExitOnFailure } from './cmd-utils'
@@ -29,7 +30,6 @@ import { GethInstanceConfig } from './interfaces/geth-instance-config'
 import { GethRunConfig } from './interfaces/geth-run-config'
 import { ensure0x } from './utils'
 import { getTestnetOutputs } from './vm-testnet-utils'
-import { waitForBlock } from 'src/e2e-tests/utils'
 
 export async function unlockAccount(
   web3: Web3,
