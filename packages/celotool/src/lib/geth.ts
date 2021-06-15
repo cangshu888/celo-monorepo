@@ -29,6 +29,7 @@ import { GethInstanceConfig } from './interfaces/geth-instance-config'
 import { GethRunConfig } from './interfaces/geth-run-config'
 import { ensure0x } from './utils'
 import { getTestnetOutputs } from './vm-testnet-utils'
+import { waitForBlock } from 'src/e2e-tests/utils'
 
 export async function unlockAccount(
   web3: Web3,
